@@ -29,3 +29,6 @@ It changes our action-creators so that we can return them as functions instead o
 Redux is my favourite state management system because it allows us to dispatch an action to the state store to update a property for whichever component, instead of passing props down the application state tree. 
 
 The react-redux library's connect HOC (higher order component) which gives us a "teleportation" capability where we do not have to pass props down a chain is extremely useful for more complex and professional apps and therefore I'd like to get to know it better in future.
+
+
+<!-- testing -->
