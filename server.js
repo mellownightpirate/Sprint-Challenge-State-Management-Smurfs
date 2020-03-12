@@ -5,6 +5,8 @@ const port = 3333;
 const server = express();
 server.use(express.json());
 server.use(cors());
+app.use(express.static(path.join(__dirname, 'smurfs/build')))
+
 
 const sendUserError = (msg, res) => {
   res.status(422);
@@ -78,6 +80,10 @@ server.delete('/smurfs/:id', (req, res) => {
     sendUserError('No smurf by that ID exists in the smurf DB', res);
   }
 });
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, 'smurfs/build', 'index.html'))
+})
 
 server.listen(port, err => {
   if (err) console.log(err);
