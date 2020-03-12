@@ -1,8 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const port = process.env.PORT || 3333;
-
 const path = require('path');
+const PORT = process.env.PORT || 3333;
 
 const server = express();
 server.use(express.json());
@@ -83,7 +82,7 @@ server.delete('/smurfs/:id', (req, res) => {
   }
 });
 
-app.get("*", (req, res) => {
+server.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, 'smurfs/build', 'index.html'))
 })
 
