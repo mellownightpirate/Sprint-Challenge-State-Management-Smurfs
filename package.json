@@ -4,7 +4,9 @@
   "description": "Redux Sprint Challenge",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "cd smurfs && npm install && npm run build"
+
   },
   "repository": {
     "type": "git",
